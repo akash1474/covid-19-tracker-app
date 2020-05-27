@@ -1,0 +1,113 @@
+.user__country {
+  height: 37.9rem;
+  width: 90%;
+  background: $color-light;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  @include alignCenter;
+  @include fadeIn(1.2s);
+  &--title {
+    font-size: $font-title;
+    color: $color-dark;
+    font-weight: 800;
+    margin: 0 auto 1rem 3rem;
+    @include fadeIn(1s);
+  }
+  &--header {
+    height: 9rem;
+    width: 100%;
+    @include justifyCenter;
+    @include fadeIn(1.2s);
+    &--img {
+      height: 5rem;
+      width: 7rem;
+      margin: 0 1rem 0 2rem;
+    }
+
+    &--name {
+      font-size: $font-medium;
+      margin: 0 auto 0 0;
+      font-weight: 800;
+      color: $color-dark;
+    }
+
+    &--rank {
+      @include alignCenter;
+      margin-left: 0px;
+      margin-right: 2rem;
+      &--title {
+        font-size: 0.8rem;
+      }
+      &--data {
+        @include justifyCenter;
+        font-size: 1.9rem;
+        background: #2ec782;
+        border-radius: 5px;
+        width: 4rem;
+        height: 3rem;
+        text-align: center;
+        font-weight: 800;
+        color: #fff;
+      }
+    }
+  }
+  &--section {
+    @include fadeIn(1.4s);
+    width: 90%;
+    margin-top: 1rem;
+    @include alignCenter;
+    &--title {
+      font-size: $font-medium;
+      margin-left: 0.5rem;
+      margin-right: auto;
+      font-weight: 800;
+      color: $color-dark;
+    }
+
+    &--group {
+      height: 6.7rem;
+      width: 98%;
+      border-radius: 10px;
+      @include justifyCenter;
+      justify-content: space-evenly;
+      &--title {
+        font-size: $font-medium;
+      }
+
+      &--part {
+        @include alignCenter;
+
+        &--title {
+          font-size: $font-small;
+          font-weight: 800;
+          color: $color-dark;
+          text-align: center;
+        }
+        &--info {
+          font-size: $font-medium;
+          font-weight: 800;
+          color: $color-light;
+          margin-top: 0.7rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &--critical {
+    margin-top: 2rem;
+    background: $color-critical;
+    border-radius: 10px;
+    @include justifyCenter;
+    justify-content: space-evenly;
+    font-size: $font-medium;
+    color: $color-dark;
+    font-weight: 800;
+    width: 90%;
+    height: 5rem;
+    @include fadeIn(1.6s);
+
+    &--info {
+      color: $color-light;
+    }
+  }
+}

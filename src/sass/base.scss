@@ -1,0 +1,118 @@
+$color-light: #fff;
+$bg-color: #f0f0f0;
+$color-dark: #656565;
+$color-total: #e2b4ff;
+$color-today: #4ce9a3;
+$color-critical: #ffa5a5;
+$font-title: 2.6rem;
+$font-small: 1.4rem;
+$font-medium: 1.8rem;
+$font-large: 2.2rem;
+*::selection {
+    color: #fff;
+    background: #4ce9a3;
+}
+*,
+*::before,
+*::after {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background: $bg-color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin alignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin justifyCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fadeIn($delay) {
+    animation: fadeIn 0.5s linear $delay forwards;
+    animation-fill-mode: backwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+.material-icons {
+    margin: 0;
+    padding: 0;
+}
+
+#homePageBtn {
+    $color: #0d67ce;
+    min-height: 4rem;
+    width: 17rem;
+    font-size: $font-small;
+    font-weight: 800;
+    @include justifyCenter;
+    margin-top: 2rem;
+    color: $color;
+    border: 2px solid $color;
+    border-radius: 20px;
+    transition-duration: 0.35s;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    @include fadeIn(0.7s);
+    &:hover {
+        color: #fff;
+        background: $color;
+    }
+    &:active {
+        animation: changeColor 0.31s linear forwards;
+    }
+}
+
+a {
+    display: flex;
+    @include justifyCenter;
+    width: 100%;
+    text-decoration: none;
+}
+
+.country__info {
+    height: 37.9rem;
+    width: 90%;
+    background: $color-light;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    @include alignCenter;
+    @include fadeIn(0.5s);
+}
+
+canvas {
+    border: 2px solid #12e084;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include fadeIn(0.5s);
+}

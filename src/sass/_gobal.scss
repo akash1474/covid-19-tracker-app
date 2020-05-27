@@ -1,0 +1,49 @@
+.global {
+  margin-top: 2rem;
+  height: fit-content;
+  @include alignCenter;
+  width: 100%;
+  &__title {
+    font-size: $font-title;
+    font-weight: 800;
+    color: $color-dark;
+    margin-right: auto;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    @include fadeIn(0.4s);
+  }
+
+  &__info {
+    height: 8.3rem;
+    width: 32.6rem;
+    background: $color-total;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    @include alignCenter;
+    justify-content: center;
+    font-weight: 800;
+    font-family: Montserrat;
+    font-size: 1.7rem;
+    &:nth-child(2) {
+      @include fadeIn(1s);
+    }
+    &:nth-child(3) {
+      @include fadeIn(1.2s);
+    }
+    &:nth-child(4) {
+      @include fadeIn(1.4s);
+    }
+    &--title {
+      font-size: $font-medium;
+      color: $color-light;
+      margin-left: 1.5rem;
+      margin-right: auto;
+    }
+    &--data {
+      color: $color-light;
+      font-size: 2.4rem;
+      margin-left: 1.5rem;
+      margin-right: auto;
+    }
+  }
+}
